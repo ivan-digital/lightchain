@@ -1,0 +1,5 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=digital.ivan.lightchain.storage.config.ContextProperty,\
+digital.ivan.lightchain.storage.s3.S3MessageHistoryStorage,\
+digital.ivan.lightchain.storage.s3.S3StorageAccessLayer,\
+digital.ivan.lightchain.storage.redis.RedisSessionStateStorageProvider,\
+digital.ivan.lightchain.storage.redis.RedisMessageStorageProvider

@@ -1,0 +1,12 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=digital.ivan.lightchain.starter.openai.OpenAiWebClientConfig,\
+digital.ivan.lightchain.starter.openai.OpenAiClient,\
+digital.ivan.lightchain.starter.chat.OpenAiChatModel,\
+digital.ivan.lightchain.starter.chat.OpenAiChatFuncModel,\
+digital.ivan.lightchain.starter.config.SimpleAgentRoutedChainChatConfig,\
+digital.ivan.lightchain.starter.config.ModelConfig,\
+digital.ivan.lightchain.starter.chat.AgentRoutedWithHistoryService,\
+digital.ivan.lightchain.starter.config.RouterConfig,\
+digital.ivan.lightchain.starter.vector.OpenAiEmbedModel,\
+digital.ivan.lightchain.starter.pinecone.PineconeFeignClientConfig,\
+digital.ivan.lightchain.starter.vector.VectorSearchService,\
+digital.ivan.lightchain.starter.chat.AgentRoutedChainService
