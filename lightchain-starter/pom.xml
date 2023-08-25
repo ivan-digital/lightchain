@@ -3,15 +3,21 @@
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <parent>
-        <groupId>ivan.digital</groupId>
+        <groupId>digital.ivan</groupId>
         <artifactId>lightchain</artifactId>
         <version>0.0.1</version>
     </parent>
 
-    <groupId>digital.ivan.langchain</groupId>
+    <groupId>digital.ivan.lightchain</groupId>
     <artifactId>lightchain-starter</artifactId>
     <version>0.0.1</version>
+    <description>
+        LightChain - LLM Chat Assistant Tool on Java with Spring Boot support - starter
+    </description>
+    <url>https://github.com/ivan-digital/lightchain</url>
+    <name>Lightchain Starter</name>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
@@ -23,7 +29,32 @@
         <json.version>20230618</json.version>
         <lightchain.version>0.0.1</lightchain.version>
         <feign.version>12.3</feign.version>
+        <maven.compile.plugin.version>3.8.0</maven.compile.plugin.version>
+        <maven.javadoc.plugin.version>3.5.0</maven.javadoc.plugin.version>
+        <maven.source.plugin.version>3.3.0</maven.source.plugin.version>
     </properties>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Ivan Potapov</name>
+            <email>potapov@ivan.digital</email>
+            <organization>Ivan Digital</organization>
+            <organizationUrl>https://github.com/ivan-digital</organizationUrl>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/ivan-digital/lightchain.git</connection>
+        <developerConnection>scm:git:ssh://github.com:ivan-digital/lightchain.git</developerConnection>
+        <url>https://github.com/ivan-digital/lightchain/tree/master/lightchain-starter</url>
+    </scm>
 
     <dependencies>
         <dependency>
@@ -73,11 +104,54 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.0</version>
+                <version>${maven.compile.plugin.version}</version>
                 <configuration>
                     <source>11</source>
                     <target>11</target>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>${maven.javadoc.plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>${maven.source.plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>attach-source</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <keyname>E3C14D0638BFD67FB811ABA716CB22ED9718C92E</keyname>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

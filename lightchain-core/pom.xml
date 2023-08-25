@@ -5,7 +5,11 @@
     <groupId>digital.ivan.lightchain</groupId>
     <artifactId>lightchain-core</artifactId>
     <version>0.0.1</version>
-    <url>http://maven.apache.org</url>
+    <description>
+        LightChain - LLM Chat Assistant Tool on Java
+    </description>
+    <url>https://github.com/ivan-digital/lightchain</url>
+    <name>Lightchain Core</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -14,7 +18,30 @@
         <json.version>20230618</json.version>
         <maven.compile.plugin.version>3.8.0</maven.compile.plugin.version>
         <maven.javadoc.plugin.version>3.5.0</maven.javadoc.plugin.version>
+        <maven.source.plugin.version>3.3.0</maven.source.plugin.version>
     </properties>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Ivan Potapov</name>
+            <email>potapov@ivan.digital</email>
+            <organization>Ivan Digital</organization>
+            <organizationUrl>https://github.com/ivan-digital</organizationUrl>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/ivan-digital/lightchain.git</connection>
+        <developerConnection>scm:git:ssh://github.com:ivan-digital/lightchain.git</developerConnection>
+        <url>https://github.com/ivan-digital/lightchain/tree/master/lightchain-core</url>
+    </scm>
 
     <dependencies>
         <dependency>
@@ -56,6 +83,36 @@
                         <id>attach-javadocs</id>
                         <goals>
                             <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>${maven.source.plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>attach-source</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <keyname>E3C14D0638BFD67FB811ABA716CB22ED9718C92E</keyname>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
                         </goals>
                     </execution>
                 </executions>
