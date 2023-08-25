@@ -1,9 +1,15 @@
 <project>
     <modelVersion>4.0.0</modelVersion>
-    <groupId>ivan.digital</groupId>
+
+    <groupId>digital.ivan</groupId>
     <artifactId>lightchain</artifactId>
     <version>0.0.1</version>
     <packaging>pom</packaging>
+    <description>
+        LightChain - LLM Chat Assistant Tool on Java with Spring Boot support
+    </description>
+    <url>https://github.com/ivan-digital/lightchain</url>
+    <name>Lightchain parent</name>
 
     <modules>
         <module>lightchain-core</module>
@@ -14,6 +20,29 @@
     <properties>
         <spring.boot.version>2.7.13</spring.boot.version>
     </properties>
+
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Ivan Potapov</name>
+            <email>potapov@ivan.digital</email>
+            <organization>Ivan Digital</organization>
+            <organizationUrl>https://github.com/ivan-digital</organizationUrl>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/ivan-digital/lightchain.git</connection>
+        <developerConnection>scm:git:ssh://github.com:ivan-digital/lightchain.git</developerConnection>
+        <url>https://github.com/ivan-digital/lightchain/tree/master/lightchain-core</url>
+    </scm>
 
     <dependencyManagement>
         <dependencies>
@@ -26,4 +55,26 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <keyname>E3C14D0638BFD67FB811ABA716CB22ED9718C92E</keyname>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
