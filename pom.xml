@@ -9,7 +9,7 @@
         LightChain - LLM Chat Assistant Tool on Java with Spring Boot support
     </description>
     <url>https://github.com/ivan-digital/lightchain</url>
-    <name>Lightchain parent</name>
+    <name>Lightchain tool</name>
 
     <modules>
         <module>lightchain-core</module>

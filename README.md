@@ -6,7 +6,9 @@ and parse their outputs. Crafted to support Java 9, the framework simplifies tas
 engineering, content management, and routing of execution flows.
 
 The framework's modular architecture includes **Spring Boot starter** and **storage** modules to 
-enhance its capabilities..
+enhance its capabilities.
+
+[LightChain JavaDoc](https://ivan-digital.github.io/lightchain/javadoc/)
 
 #### Modules
 
@@ -16,6 +18,14 @@ enhance its capabilities..
 
 #### Core library
 
+```
+<dependency>
+    <groupId>digital.ivan.lightchain</groupId>
+    <artifactId>lightchain-core</artifactId>
+    <version>0.0.1</version>
+</dependency>
+```
+
 #### Spring Boot Chat Starter
 
 ##### Getting started
@@ -24,7 +34,7 @@ To include LightChain in your project, simply add the following dependency:
 
 ```
 <dependency>
-    <groupId>digital.ivan.langchain</groupId>
+    <groupId>digital.ivan.lightchain</groupId>
     <artifactId>lightchain-starter</artifactId>
     <version>0.0.1</version>
 </dependency>
